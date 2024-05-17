@@ -27,6 +27,12 @@ function addBook(){
 	}
 }
 
+function deleteBook(index = 0) {
+	books.splice(index, 1);
+	showBooks();
+}
+
+
 function showBooks() {
 	const bookdDiv = books.map((book, index) => `<h1>Book Number: ${index + 1}</h1>
 		<p><strong>Book Name:</strong> ${book.name}</p>
