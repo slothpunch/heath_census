@@ -8,8 +8,8 @@ const employees = [
 // Create the displayEmployees() function to display employee details 
 // const totalEmployees = employees.map((employee, index) =>
 function displayEmployees() {
-    const totalEmployees = employees.map((employee) =>
-        `<p>${employee.id}: ${employee.name}: ${employee.age} - ${employee.department} - ${employee.salary}</p>`
+    const totalEmployees = employees.map((emp) =>
+        `<p>${emp.id}: ${emp.name}: ${emp.age} - ${emp.department} - ${emp.salary}</p>`
       ).join('');
       document.getElementById('employeesDetails').innerHTML = totalEmployees;
 }
@@ -28,7 +28,7 @@ function displayHREmployees() {
 
 function findEmployeeById(emp_id) {
     const foundEmp = employees.find((emp) => emp.id === emp_id);
-    if (foundEmp) {
+    if (foundEmp) { // if foundEmp is trusthy is truthy (not null, undefined, false, 0, NaN, or an empty string)
         document.getElementById('employeesDetails').innerHTML = `<p>${foundEmp.id}: ${foundEmp.name}: ${foundEmp.age} - ${foundEmp.department} - ${foundEmp.salary}</p>`;
     }
     else{

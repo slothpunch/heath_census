@@ -68,19 +68,19 @@ const totalValue = filteredProducts.reduce((total, product) => total += product.
 console.log(totalValue);
 
 
-const employees = {};
+const employees_arr = {};
 
 // 1
-const employee = employees.find((e) => e.id === 2);
+const employee = employees_arr.find((e) => e.id === 2);
 
 // 2
-// const employee = employees.find(function(e) {
+// const employee = employees_arr.find(function(e) {
 //     return e.id === 2;
 // });
 
 // 3
 // function findEmployee(emp, emp_id){
-//     for(let i = 0; i <= length(employees); i++){
+//     for(let i = 0; i <= length(employees_arr); i++){
 //         if (emp['id'][i] === emp_id) {
 //             return emp[i];
 //         }
@@ -90,6 +90,19 @@ const employee = employees.find((e) => e.id === 2);
 
 
 // W-2-2. employee details
+
+const employees = [
+    { id: 1, name: 'John Doe', age: 30, department: 'IT', salary: 50000 },
+    { id: 2, name: 'Alice Smith', age: 28, department: 'HR', salary: 45000 },
+    { id: 3, name: 'Bob Johnson', age: 35, department: 'Finance', salary: 60000 },
+    //... More employee records can be added here
+  ];
+
+// Create the following functions:
+//	- displayEmployees(): Display all employees with their details
+// 	- calculateTotalSalaries(): Calculate the total salary of employees
+// 	- displayHREmployees(): Find HR employees and display them with their details
+// 	- findEmployeeById(): Find an employee with the employee id 
 
 
 
